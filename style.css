@@ -1,0 +1,104 @@
+body{
+    background-color: #152238;
+}
+.game{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 7px;
+}
+.draw{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 7px;
+}
+.x1{
+    position: relative;
+    
+    padding: 20px;
+    border: 2px solid white;
+    width: 1px;
+    height: 1px;
+    margin: -5px;
+    display: inline-block;
+}
+.x2{
+    position: relative;
+    
+    padding: 20px;
+    border: 2px solid white;
+    width: 1px;
+    height: 1px;
+    margin: -5px;
+    display: inline-block;
+}
+.x3{
+    position: relative;
+    padding: 20px;
+    border: 2px solid white;
+    width: 1px;
+    height: 1px;
+    margin: -5px;
+    display: inline-block;
+}
+.x4{
+    position: relative;
+    font-size: 0;
+    padding: 20px;
+    border: 2px solid white;
+    width: 1px;
+    height: 1px;
+    margin: -5px;
+    display: inline-block;
+}
+.x5{
+    position: relative;
+    font-size: 0;
+    padding: 20px;
+    border: 2px solid white;
+    width: 1px;
+    height: 1px;
+    margin: -5px;
+    display: inline-block;
+}
+.x6{
+    position: relative;
+    font-size: 0;
+    padding: 20px;
+    border: 2px solid white;
+    width: 1px;
+    height: 1px;
+    margin: -5px;
+    display: inline-block;
+}
+.x7{
+    position: relative;
+    padding: 20px;
+    border: 2px solid white;
+    width: 1px;
+    height: 1px;
+    margin: -5px;
+    display: inline-block;
+}
+.x8{
+    position: relative;
+    padding: 20px;
+    border: 2px solid white;
+    width: 1px;
+    height: 1px;
+    margin: -5px;
+    display: inline-block;
+}
+.x9{
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid white;
+    width: 1px;
+    height: 1px;
+    margin: -5px;
+    display: inline-block;
+}
