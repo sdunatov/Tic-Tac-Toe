@@ -18,9 +18,11 @@ body{
 .player{
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 7px;
+    font-style: oblique;
+    margin-bottom: 10px;
 }
 .draw{
     text-align: center;
