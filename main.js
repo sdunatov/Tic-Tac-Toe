@@ -66,6 +66,13 @@ function findWinner(){
     if (w1.every((i) => xFields.includes(i)) === true || w2.every((i) => xFields.includes(i)) === true || w3.every((i) => xFields.includes(i)) === true || f1.every((i) => xFields.includes(i)) === true || f2.every((i) => xFields.includes(i)) === true || f3.every((i) => xFields.includes(i)) === true || d1.every((i) => xFields.includes(i)) === true || d2.every((i) => xFields.includes(i)) === true){
         player.innerHTML = "First player (X) is the winner!";
     }
+    if(xFields.length == 5 && oFields.length == 4){
+        player.innerHTML = "It is a TIE!";
+    }
+   
+
 };
+
+
 
 
