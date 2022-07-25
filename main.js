@@ -82,6 +82,7 @@ function Reset() {
     boxes.forEach((box) =>{
         box.querySelector("img").src = "";
         player.innerHTML = "The first (X) player's turn!";
+        isSecondPlayerPlaying = true;
     });
 };
 
