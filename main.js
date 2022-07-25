@@ -1,5 +1,6 @@
 boxes = document.querySelectorAll('.box')
 player = document.querySelector('.player')
+reset = document.querySelector('.btn');
 
 let images = [];
 images[0] = new Image();
@@ -28,7 +29,6 @@ boxes.forEach(function(box){
         findWinner();
     })
 });
-
 
 function findWinner(){
     const oFields = [];
@@ -69,9 +69,16 @@ function findWinner(){
     if(xFields.length == 5 && oFields.length == 4){
         player.innerHTML = "It is a TIE!";
     }
-   
-
 };
+
+function Reset() {
+    boxes.forEach((box) =>{
+        box.querySelector("img").src = "";
+        player.innerHTML = "The first (X) player's turn!";
+    });
+};
+
+reset.addEventListener("click", Reset);
 
 
 
