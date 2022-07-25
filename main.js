@@ -1,6 +1,9 @@
 boxes = document.querySelectorAll('.box')
 player = document.querySelector('.player')
 reset = document.querySelector('.btn');
+resultX = document.querySelector('.resultX');
+resultO = document.querySelector('.resultO')
+resultTie = document.querySelector('.resultTie')
 
 let images = [];
 images[0] = new Image();
@@ -26,8 +29,10 @@ boxes.forEach(function(box){
             isSecondPlayerPlaying = true;
             player.innerHTML = "The first (X) player's turn!";
         }
-        findWinner();
+        findWinner();    
+        saveToLocalStorage();
     })
+    
 });
 
 function findWinner(){
@@ -49,13 +54,13 @@ function findWinner(){
     const d2 = [2, 4, 6];
 
     boxes.forEach((box, index) => {
-        if(box.querySelector("img").src === "file:///C:/Users/Suzana/code/tictactoe/o.png"){
+        if(box.querySelector("img").src === "file:///C:/Users/Suzana/code/tictactoe/Tic-Tac-Toe/o.png"){
             oFields.push(index);
         }
     });
    
     boxes.forEach((box, index) => {
-        if(box.querySelector("img").src === "file:///C:/Users/Suzana/code/tictactoe/x.png"){
+        if(box.querySelector("img").src === "file:///C:/Users/Suzana/code/tictactoe/Tic-Tac-Toe/x.png"){
             xFields.push(index);
         }
     });
@@ -69,6 +74,8 @@ function findWinner(){
     if(xFields.length == 5 && oFields.length == 4){
         player.innerHTML = "It is a TIE!";
     }
+    
+     
 };
 
 function Reset() {
@@ -79,6 +86,29 @@ function Reset() {
 };
 
 reset.addEventListener("click", Reset);
+
+let winnerX = 0;
+let winnerO = 0;
+let tie = 0;
+function saveToLocalStorage() {
+    if(player.innerHTML === "First player (X) is the winner!"){
+        winnerX++;
+        resultX.innerHTML = winnerX;
+        localStorage.setItem('X winner', winnerX.toString());
+    }
+    if(player.innerHTML === "Second player (O) is the winner!"){
+        winnerO++;
+        resultO.innerHTML = winnerO;
+        localStorage.setItem('O winner', winnerO.toString());
+    }
+    if(player.innerHTML === "It is a TIE!"){
+        tie++;
+        resultTie.innerHTML = tie;
+        localStorage.setItem('Tie', tie.toString());
+    }
+};
+
+
 
 
 

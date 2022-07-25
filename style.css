@@ -11,34 +11,27 @@ body{
 .game{
     text-align: center;
     color: white;
-    font-size: 30px;
+    font-size: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 7px;
 }
 .player{
     text-align: center;
     color: white;
-    font-size: 15px;
+    font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 7px;
     font-style: oblique;
     margin-bottom: 10px;
 }
-.draw{
-    text-align: center;
-    color: white;
-    font-size: 12px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 7px;
-}
 
 .x1, .x2, .x3, .x4, .x5, .x6, .x7, .x8, .x9{
     position: relative;
-    padding: 10px;
+    padding: 15px;
     border: 2px solid white;
-    width: 20px;
-    height: 20px;
-    margin: -5px;
+    width: 30px;
+    height: 30px;
+    margin: -10px;
     display: inline-block;
     cursor: pointer;
 }
@@ -50,7 +43,7 @@ body{
 .btn {
   appearance: none;
   backface-visibility: hidden;
-  background-color: #27ae60;
+  background-color: #E57A44;
   border-radius: 8px;
   border-style: none;
   box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
@@ -78,7 +71,7 @@ body{
 }
 
 .btn:hover {
-  background-color: #1e8449;
+  background-color: #ECB390;
   opacity: 1;
   transform: translateY(0);
   transition-duration: .35s;
@@ -88,4 +81,31 @@ body{
 .btn:active {
   transform: translateY(2px);
   transition-duration: .35s;
+}
+
+
+.results{
+    font-size: 16px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #2E3138;
+    background-color: #C8D6AF;
+    border-radius: 10px;
+    margin:  50px 600px 10px 600px;
+    padding: 10px;
+}
+
+.X, .O, .Tie{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #2E3138;
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+}
+.resultX, .resultO, .resultTie{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #2E3138;
+    position: relative;
+    display: inline-block;
 }
