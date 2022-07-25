@@ -40,7 +40,7 @@ body{
     text-align: center;
 }
 
-.btn {
+.btnRestart {
   appearance: none;
   backface-visibility: hidden;
   background-color: #E57A44;
@@ -70,7 +70,7 @@ body{
   white-space: nowrap;
 }
 
-.btn:hover {
+.btnRestart:hover {
   background-color: #ECB390;
   opacity: 1;
   transform: translateY(0);
@@ -78,7 +78,7 @@ body{
   box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
 }
 
-.btn:active {
+.btnRestart:active {
   transform: translateY(2px);
   transition-duration: .35s;
 }
@@ -109,3 +109,19 @@ body{
     position: relative;
     display: inline-block;
 }
+
+.choosePlayer{
+    font-size: 15px;
+}
+.btnX, .btnO{
+   background-color: transparent;
+   cursor: pointer;
+   height: 16px;
+   border: none;
+   
+}
+.Ximg, .Oimg{
+    width: 30px;
+    height: 30px;
+}
+

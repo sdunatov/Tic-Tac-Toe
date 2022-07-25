@@ -1,9 +1,12 @@
 boxes = document.querySelectorAll('.box')
 player = document.querySelector('.player')
-reset = document.querySelector('.btn');
+reset = document.querySelector('.btnRestart');
 resultX = document.querySelector('.resultX');
 resultO = document.querySelector('.resultO')
 resultTie = document.querySelector('.resultTie')
+choosePlayer = document.querySelector('.choosePlayer');
+btnX = document.querySelector('.btnX');
+btnO = document.querySelector('.btnO');
 
 let images = [];
 images[0] = new Image();
@@ -12,8 +15,21 @@ images[0].src = 'x.png';
 images[1] = new Image();
 images[1].src = 'o.png';
 
-let isSecondPlayerPlaying = true;
-player.innerHTML = "The first (X) player's turn!";
+let isSecondPlayerPlaying;
+btnX.addEventListener('click', Xstarts);
+btnO.addEventListener('click', Ostarts);
+
+function Xstarts() {
+    isSecondPlayerPlaying = true;
+    player.innerHTML = "The first (X) player's turn!";
+    choosePlayer.style.display = "none";
+};
+
+function Ostarts() {
+    isSecondPlayerPlaying = false;
+    player.innerHTML = "The second (O) player's turn!";
+    choosePlayer.style.display = "none";
+};
 
 boxes.forEach(function(box){
     box.addEventListener('click', (e)=>{
@@ -78,15 +94,16 @@ function findWinner(){
      
 };
 
-function Reset() {
+function Restart() {
     boxes.forEach((box) =>{
         box.querySelector("img").src = "";
         player.innerHTML = "The first (X) player's turn!";
         isSecondPlayerPlaying = true;
+        choosePlayer.style.display = "inline-block";
     });
 };
 
-reset.addEventListener("click", Reset);
+reset.addEventListener('click', Restart);
 
 let winnerX = 0;
 let winnerO = 0;
